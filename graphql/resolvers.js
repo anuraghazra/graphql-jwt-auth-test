@@ -1,6 +1,9 @@
 const TodoController = require('../controllers/TodoController');
 const AuthController = require('../controllers/AuthController');
 
+const { Todo } = require('../models/Todo');
+const { User } = require('../models/User');
+
 exports.resolvers = {
   Query: {
     todos: () => Todo.find({}),

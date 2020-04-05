@@ -3,8 +3,8 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   directive @auth on OBJECT | FIELD_DEFINITION
 
-  type Query {
-    todos: [Todo!]! @auth
+  type Query @auth {
+    todos: [Todo!]!
     users: [User!]!
   }
   
